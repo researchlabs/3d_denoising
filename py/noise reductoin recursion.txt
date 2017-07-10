@@ -1,0 +1,10 @@
+how_much
+how_much with noise && reduction nose        : 6
+how_much with reduction origin and origin    : 5255053
+how_much reduction noise and reduction origin: 17
+how_much 2 - origin                          : 3856902
+how_much 2 - 1                               : 5351633
+how_much 3 - origin                          : 2355531
+how_much 3 - 1                               : 4073778
+how_much 3 - 2                               : 5410991
+
