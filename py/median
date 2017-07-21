@@ -1,0 +1,40 @@
+(my_env) oleksii@HellUbuntu:~/workspace/3d_denoising/py$ python Scipy_Median_Filter_Test.py ../../dataset/d0_test/ 3
+Windows size  3
+Shape: 32, 512, 512
+Медианный фильтр работает по разному для всего изображения целиком и послойно
+
+Медианный фильтр всего изображения:
+Измененных пикселей: 5391503
+Mean Squared Error: 796.891257
+
+Медианный фильтр по слоям:
+Измененных пикселей: 3655260
+Mean Squared Error: 126.707464
+
+(my_env) oleksii@HellUbuntu:~/workspace/3d_denoising/py$ python Scipy_Median_Filter_Test.py ../../dataset/d0_test/ 5
+sys.argv[2]  5
+Windows size  5
+Shape: 32, 512, 512
+Медианный фильтр работает по разному для всего изображения целиком и послойно
+
+Медианный фильтр всего изображения:
+Измененных пикселей: 6226194
+Mean Squared Error: 4663.080555
+
+Медианный фильтр по слоям:
+Измененных пикселей: 5216643
+Mean Squared Error: 1172.648130
+
+(my_env) oleksii@HellUbuntu:~/workspace/3d_denoising/py$ python Scipy_Median_Filter_Test.py ../../dataset/d0_test/ 7
+Windows size  7
+Shape: 32, 512, 512
+Медианный фильтр работает по разному для всего изображения целиком и послойно
+
+Медианный фильтр всего изображения:
+Измененных пикселей: 6390862
+Mean Squared Error: 10633.170675
+
+Медианный фильтр по слоям:
+Измененных пикселей: 5820311
+Mean Squared Error: 2452.179423
+

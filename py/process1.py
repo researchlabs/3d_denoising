@@ -15,9 +15,16 @@ from matplotlib import pyplot, cm
 import skimage
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
+import sys
+print(sys.version)
+bashCommand = "conda info -e"
+os.system(bashCommand)
+
+
 # Some constants
 #INPUT_FOLDER = '/home/oleksii/kaggle/Bowl/input/sample_images/'
 INPUT_FOLDER = '../../dataset/d0_test'
+OUTPUT_FOLDER = '../../dataset/d0_del'
 #INPUT_FOLDER = '../../dataset/d1_SE000002'
 #INPUT_FOLDER = '../../dataset/d2_SE000001'
 # INPUT_FOLDER = '/home/oleksii/kaggle/Bowl/trio/'
@@ -37,6 +44,11 @@ def load_scan(path):
         s.SliceThickness = slice_thickness
 
     return slices
+
+def save_scan(path, dataset):
+	for i in range(0, len(dataset)-1):	
+		dicom.write_file(path+"/slice"+i, dataset[i])
+	return 0
 
 def get_pixels_hu(scans):
     image = np.stack([s.pixel_array for s in scans])
@@ -61,6 +73,9 @@ def get_pixels_hu(scans):
     return np.array(image, dtype=np.int16)
 
 first_patient = load_scan(INPUT_FOLDER)
+##save_scan(OUTPUT_FOLDER, first_patient)
+exit();
+
 first_patient_pixels = get_pixels_hu(first_patient)
 
 
