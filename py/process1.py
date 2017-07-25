@@ -82,7 +82,7 @@ first_patient_pixels = get_pixels_hu(first_patient)
 plt.hist(first_patient_pixels.flatten(), bins=80, color='c')
 plt.xlabel("Hounsfield Units (HU)")
 plt.ylabel("Frequency")
-plt.show()
+#plt.show()
 
 
 # Show some slice in the middle
@@ -175,6 +175,11 @@ image_without_noise2 = noise_reduction(image_without_noise1)
 how_much4 = distance_calculation(image_without_noise2, first_patient_pixels)
 how_much5 = distance_calculation(image_without_noise2, image_without_noise1)
 
+image_without_noise3 = noise_reduction(image_without_noise2)
+how_much6 = distance_calculation(image_without_noise3, first_patient_pixels)
+how_much7 = distance_calculation(image_without_noise3, image_without_noise1)
+how_much8 = distance_calculation(image_without_noise3, image_without_noise2)
+
 print ("how_much")
 print ("how_much with noise && reduction nose        :", how_much1)
 print ("how_much with reduction origin and origin    :", how_much2)
@@ -183,6 +188,9 @@ print ("how_much reduction noise and reduction origin:", how_much3)
 print ("how_much 2 - origin                          :", how_much4)
 print ("how_much 2 - 1                               :", how_much5)
 
+print ("how_much 3 - origin                          :", how_much6)
+print ("how_much 3 - 1                               :", how_much7)
+print ("how_much 3 - 2                               :", how_much8)
 
 exit();
 

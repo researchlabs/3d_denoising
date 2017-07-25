@@ -2,13 +2,11 @@
 
 dicom1 = "../../dataset/d1_SE000002"
 #dicom1 = "../../dataset/d0_test"
+import sys
+from Scipy_Median_Filter_Test import *
+from fuzzy_convolution_3D import *
 
-import Scipy_Median_Filter_Test
-#import dicom_numpy
-
-import fuzzy_convolution_3D
-
-def main1():
+def main():
     if len(sys.argv) < 2:
         print("Необходимо указать путь к папке с кт в параметрах.")
         sys.exit(1)
